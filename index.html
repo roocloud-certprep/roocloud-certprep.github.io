@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RooCloud Exam Prep — IT Certification Study Guides & Video Courses</title>
-  <meta name="description" content="Study guides and video courses for IT certifications, including the ISACA Advanced in AI Audit (AAIA). Detailed notes, lessons, MCQs and practice exams by RooCloud.">
-  <meta name="keywords" content="RooCloud, exam prep, IT certification study guide, ISACA AAIA, Advanced in AI Audit, AAIA certification, AI audit course, free certification course">
+  <title>RooCloud Exam Prep — AI &amp; IT Certification Study Guides &amp; Video Courses</title>
+  <meta name="description" content="Study guides and video courses for ISACA AI certifications — the Advanced in AI Audit (AAIA) and Advanced in AI Security Management (AAISM). Notes, lessons, MCQs and practice exams by RooCloud.">
+  <meta name="keywords" content="RooCloud, exam prep, IT certification study guide, ISACA AAIA, ISACA AAISM, Advanced in AI Audit, Advanced in AI Security Management, AAIA certification, AAISM certification, AI audit course, AI security course">
   <meta name="author" content="RooCloud">
   <link rel="canonical" href="https://roocloud-certprep.github.io/">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -13,13 +13,13 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RooCloud Exam Prep">
-  <meta property="og:title" content="RooCloud Exam Prep — IT Certification Study Guides">
-  <meta property="og:description" content="Study guides and video courses for IT certifications, including the ISACA Advanced in AI Audit (AAIA).">
+  <meta property="og:title" content="RooCloud Exam Prep — AI &amp; IT Certification Study Guides">
+  <meta property="og:description" content="Study guides and video courses for ISACA AI certifications: AAIA (AI Audit) and AAISM (AI Security Management).">
   <meta property="og:url" content="https://roocloud-certprep.github.io/">
   <meta property="og:image" content="/assets/img/RooCloud.com-Exam-Prep.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RooCloud Exam Prep — IT Certification Study Guides">
-  <meta name="twitter:description" content="Study guides and video courses for IT certifications, including the ISACA Advanced in AI Audit (AAIA).">
+  <meta name="twitter:title" content="RooCloud Exam Prep — AI &amp; IT Certification Study Guides">
+  <meta name="twitter:description" content="Study guides and video courses for ISACA AI certifications: AAIA (AI Audit) and AAISM (AI Security Management).">
   <meta name="twitter:image" content="/assets/img/RooCloud.com-Exam-Prep.png">
 
   <script type="application/ld+json">
@@ -27,7 +27,7 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "RooCloud Exam Prep — Certification Study Guides",
-    "description": "A hub of study guides and video courses for IT certifications, including the ISACA Advanced in AI Audit (AAIA).",
+    "description": "Study guides and video courses for ISACA AI certifications: AAIA (Advanced in AI Audit) and AAISM (Advanced in AI Security Management).",
     "url": "https://roocloud-certprep.github.io/",
     "publisher": {
       "@type": "Organization",
@@ -37,11 +37,25 @@
         "@type": "ImageObject",
         "url": "https://roocloud-certprep.github.io/assets/img/RooCloud.com-Exam-Prep.png"
       }
-    }
+    },
+    "hasPart": [
+      {
+        "@type": "Course",
+        "name": "ISACA AAIA — Advanced in AI Audit",
+        "url": "https://roocloud-certprep.github.io/isaca-aaia-exam-prep/",
+        "provider": { "@type": "Organization", "name": "RooCloud" }
+      },
+      {
+        "@type": "Course",
+        "name": "ISACA AAISM — Advanced in AI Security Management",
+        "url": "https://roocloud-certprep.github.io/isaca-aaism-exam-prep/",
+        "provider": { "@type": "Organization", "name": "RooCloud" }
+      }
+    ]
   }
   </script>
 
-  <!-- Sintony brand font (self-hosted in /assets/fonts/) -->
+  <!-- Sintony brand font (self-hosted) -->
   <style>
     @font-face {
       font-family: 'Sintony'; font-style: normal; font-weight: 400; font-display: swap;
@@ -56,122 +70,340 @@
       --brand: #6666cc;
       --brand-link: #4a4ab8;
       --brand-dark: #3f3f9e;
-      --text: #212529;
+      --brand-soft: #eef0ff;
+      --text: #1f2236;
       --muted: #5b6472;
-      --border: #e4e8ee;
-      --max: 920px;
+      --border: #e6e8ef;
+      --max: 980px;
+      --radius: 14px;
+      --radius-lg: 18px;
     }
-    * { box-sizing: border-box; }
+    *, *:before, *:after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
-      margin: 0; background: #fff; color: var(--text);
+      margin: 0;
+      background: #ffffff;
+      color: var(--text);
       font-family: 'Sintony', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.75; font-size: 18px; -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+      font-size: 17.5px;
+      -webkit-font-smoothing: antialiased;
     }
-    a { color: var(--brand-link); text-decoration: none; }
-    a:hover { color: var(--brand-dark); }
-    .site-header { border-bottom: 1px solid var(--border); }
-    .header-inner, .wrap { max-width: var(--max); margin: 0 auto; padding: 16px 20px; }
-    .site-logo { display: block; height: 26px; width: auto; }
 
+    /* Thin brand accent at the very top — editorial polish */
+    .top-accent {
+      height: 3px;
+      background: linear-gradient(90deg, #6666cc 0%, #8c8cdf 50%, #6666cc 100%);
+    }
+
+    a { color: var(--brand-link); text-decoration: none; transition: color .15s ease; }
+    a:hover { color: var(--brand-dark); }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    .site-header { border-bottom: 1px solid var(--border); background: #fff; }
+    .header-inner {
+      max-width: var(--max); margin: 0 auto; padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .site-logo { display: block; height: 26px; width: auto; }
+    .header-link { color: var(--muted); font-size: .92rem; font-weight: 600; }
+    .header-link:hover { color: var(--brand-link); }
+
+    /* HERO */
     .hero {
-      background: linear-gradient(135deg, #eef0ff 0%, #e9f1fb 100%);
+      background:
+        radial-gradient(circle at 85% 18%, rgba(102,102,204,0.10) 0%, rgba(102,102,204,0) 50%),
+        radial-gradient(circle at 12% 90%, rgba(102,102,204,0.07) 0%, rgba(102,102,204,0) 45%),
+        linear-gradient(180deg, #f6f7ff 0%, #ffffff 100%);
       border-bottom: 1px solid var(--border);
     }
-    .hero .wrap { padding: 48px 20px 40px; }
-    h1 { color: var(--brand); font-weight: 700; font-size: 2.3rem; line-height: 1.2; margin: 0 0 0.3em; letter-spacing: -0.01em; }
-    .hero p.lead { font-size: 1.2rem; color: #33335a; margin: 0 0 1.2em; max-width: 640px; }
-    .btn {
-      display: inline-block; background: var(--brand); color: #fff !important;
-      padding: 0.7em 1.4em; border-radius: 8px; font-weight: 700; text-decoration: none;
+    .hero .wrap { padding: 72px 24px 64px; }
+    .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--brand-link);
+      padding: .35em .85em;
+      border-radius: 999px;
+      background: rgba(102,102,204,0.10);
+      margin-bottom: 18px;
     }
-    .btn:hover { background: var(--brand-dark); }
-    .btn.secondary { background: #fff; color: var(--brand-link) !important; border: 1px solid #cdd3f5; margin-left: 0.5em; }
+    h1 {
+      color: var(--text);
+      font-family: 'Sintony', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 4.4vw, 2.85rem);
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      margin: 0 0 .45em;
+    }
+    h1 .accent { color: var(--brand); }
+    .hero p.lead {
+      font-size: 1.18rem;
+      color: #3d4060;
+      margin: 0 0 1.8em;
+      line-height: 1.6;
+    }
 
-    h2 { color: var(--brand); font-weight: 700; font-size: 1.55rem; margin: 0 0 0.2em; }
-    .section-sub { color: var(--muted); margin: 0 0 1.4em; }
+    .btn {
+      display: inline-block;
+      background: var(--brand);
+      color: #fff !important;
+      padding: .8em 1.5em;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .98rem;
+      text-decoration: none;
+      transition: transform .12s ease, background .15s ease, box-shadow .15s ease;
+      box-shadow: 0 2px 4px rgba(102,102,204,.18);
+    }
+    .btn:hover { background: var(--brand-dark); color: #fff; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(102,102,204,.28); }
+    .btn.secondary {
+      background: #fff;
+      color: var(--brand-link) !important;
+      border: 1px solid #cdd3f5;
+      margin-left: 10px;
+      box-shadow: none;
+    }
+    .btn.secondary:hover { background: var(--brand-soft); color: var(--brand-dark) !important; box-shadow: 0 4px 14px rgba(102,102,204,.14); }
 
-    .courses { display: grid; grid-template-columns: 1fr; gap: 18px; margin: 1.4em 0 0; }
-    @media (min-width: 720px) { .courses { grid-template-columns: 1fr 1fr; } }
+    /* COURSES */
+    .section-head { max-width: var(--max); margin: 72px auto 0; padding: 0 24px; }
+    .section-head h2 { color: var(--text); font-weight: 700; font-size: 1.65rem; margin: 0 0 .25em; letter-spacing: -0.01em; }
+    .section-head .section-sub { color: var(--muted); margin: 0 0 1.8em; }
+
+    .courses {
+      display: grid; grid-template-columns: 1fr; gap: 22px;
+      max-width: var(--max); margin: 0 auto; padding: 0 24px 8px;
+    }
+    @media (min-width: 760px) { .courses { grid-template-columns: 1fr 1fr; } }
 
     .course-card {
-      border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px;
-      transition: box-shadow .15s ease, transform .15s ease; background: #fff; display: flex; flex-direction: column;
+      position: relative;
+      display: flex; flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px 24px;
+      box-shadow: 0 1px 2px rgba(20,20,60,0.03);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      text-decoration: none; color: inherit;
     }
-    .course-card.live:hover { box-shadow: 0 8px 28px rgba(60,60,120,.14); transform: translateY(-2px); }
-    .badge { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: .25em .6em; border-radius: 999px; }
+    a.course-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(60,60,140,0.12);
+      border-color: #cfd3f5;
+    }
+    .badge {
+      display: inline-block;
+      font-size: .7rem; font-weight: 700;
+      letter-spacing: .07em; text-transform: uppercase;
+      padding: .3em .7em; border-radius: 999px;
+      align-self: flex-start;
+    }
     .badge.available { background: #e6f6ec; color: #1c7a44; }
     .badge.soon { background: #f1f1f7; color: #7a7a90; }
-    .course-card h3 { color: var(--brand); font-size: 1.25rem; margin: .6em 0 .3em; }
-    .course-card p { margin: 0 0 1em; color: var(--text); flex-grow: 1; }
-    .course-card .meta { color: var(--muted); font-size: .92rem; margin: 0 0 1em; }
-    .course-card.soon { background: #fafafe; }
-    .course-card.soon h3 { color: #8a8aa6; }
-
-    .cta-strip {
-      background: linear-gradient(135deg, #eef0ff 0%, #e9f1fb 100%);
-      border: 1px solid #cdd3f5; border-radius: 14px; padding: 1.4em 1.6em; margin: 2.4em 0;
-      color: #23234d;
+    .course-card h3 {
+      color: var(--brand); font-size: 1.3rem;
+      margin: 14px 0 4px;
+      letter-spacing: -0.01em; line-height: 1.25;
     }
-    .cta-strip h2 { color: #4a45c2; margin-top: 0; }
-    .cta-strip a { font-weight: 700; text-decoration: underline; color: #3a36b3; }
+    .course-card .subtitle { color: var(--muted); font-size: .94rem; margin: 0 0 14px; }
+    .course-card p { margin: 0 0 14px; color: var(--text); flex-grow: 1; }
+    .course-card .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 16px; }
+    .chip {
+      display: inline-block; font-size: .76rem; font-weight: 600;
+      padding: .3em .7em; border-radius: 999px;
+      background: var(--brand-soft); color: var(--brand-link);
+    }
+    .course-card .meta { color: var(--muted); font-size: .9rem; margin: 0 0 16px; }
+    .course-card .card-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--brand-link); font-weight: 700; font-size: .96rem;
+      margin-top: auto;
+    }
+    a.course-card:hover .card-cta { color: var(--brand-dark); }
+    .arrow { transition: transform .15s ease; }
+    a.course-card:hover .arrow { transform: translateX(3px); }
 
-    footer.site-footer { border-top: 1px solid var(--border); color: var(--muted); font-size: .9rem; }
-    footer .wrap { text-align: center; padding: 22px 20px 40px; }
+    .more-courses-note {
+      max-width: var(--max); margin: 22px auto 0; padding: 0 24px;
+      color: var(--muted); font-size: .94rem; text-align: center;
+    }
+    .more-courses-note a { font-weight: 600; }
+
+    /* FEATURES — what's inside every course */
+    .features {
+      margin-top: 72px;
+      padding: 60px 0 64px;
+      background: linear-gradient(180deg, #fafbff 0%, #f6f7ff 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .features h2 { color: var(--text); font-weight: 700; font-size: 1.5rem; margin: 0 0 .25em; }
+    .features .section-sub { color: var(--muted); margin: 0 0 2em; }
+    .feature-grid { display: grid; gap: 28px; grid-template-columns: 1fr; }
+    @media (min-width: 720px) { .feature-grid { grid-template-columns: repeat(3, 1fr); gap: 36px; } }
+    .feature .ic {
+      font-size: 1.7rem; line-height: 1;
+      width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(20,20,60,0.04);
+      margin-bottom: 14px;
+    }
+    .feature h3 { color: var(--brand); font-size: 1.1rem; font-weight: 700; margin: 0 0 6px; }
+    .feature p { color: var(--text); margin: 0; font-size: 1rem; line-height: 1.6; }
+    .feature p a { font-weight: 600; }
+
+    /* CTA */
+    .cta-strip {
+      max-width: var(--max); margin: 56px auto 64px; padding: 28px 32px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #eef0ff 0%, #e9f1fb 100%);
+      border: 1px solid #cdd3f5; color: #23234d;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .cta-strip h2 { color: #4a45c2; margin: 0 0 4px; font-size: 1.2rem; font-weight: 700; }
+    .cta-strip p { margin: 0; color: #3d3d70; font-size: .98rem; }
+    .cta-strip .btn { background: var(--brand); }
+
+    /* FOOTER */
+    footer.site-footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted); font-size: .9rem;
+      padding: 32px 24px 40px;
+    }
+    .footer-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 18px; flex-wrap: wrap;
+    }
     footer a { color: var(--muted); }
-    @media (max-width: 600px) { body { font-size: 16px; } h1 { font-size: 1.8rem; } }
+    footer a:hover { color: var(--brand-link); }
+    .footer-links a { margin-left: 18px; }
+    .footer-links a:first-child { margin-left: 0; }
+
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .hero .wrap { padding: 52px 22px 48px; }
+      .btn { padding: .75em 1.2em; }
+      .btn.secondary { margin-left: 0; margin-top: 10px; display: inline-block; }
+      .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+      .footer-links a:first-child { margin-left: 18px; }
+      .cta-strip { padding: 22px 22px; }
+    }
+
+    /* On very narrow phones, hide the right-side header link so the logo isn't crowded */
+    @media (max-width: 460px) {
+      .header-link { display: none; }
+    }
   </style>
 </head>
 <body>
+  <div class="top-accent"></div>
+
   <header class="site-header">
     <div class="header-inner">
       <a href="/" aria-label="RooCloud Exam Prep home">
         <img src="/assets/img/RooCloud.com-Exam-Prep.png" alt="RooCloud Exam Prep" width="190" height="25" class="site-logo">
       </a>
+      <a class="header-link" href="https://roocloud.com">Practice Exams ↗</a>
     </div>
   </header>
 
   <section class="hero">
     <div class="wrap">
-      <h1>IT Certification Study Guides &amp; Video Courses</h1>
-      <p class="lead">In-depth, exam-aligned notes paired with video lessons, MCQs and practice tests for today's most in-demand IT and AI certifications — built by RooCloud.</p>
-      <a class="btn" href="https://roocloud-certprep.github.io/isaca-aaia-exam-prep/">Start with ISACA AAIA</a>
-      <a class="btn secondary" href="https://roocloud.com">Practice Exams</a>
+      <span class="eyebrow">RooCloud Exam Prep</span>
+      <h1>Study guides &amp; video courses for <span class="accent">AI &amp; IT certifications</span></h1>
+      <p class="lead">In-depth, exam-aligned notes paired with video lessons, chapter MCQs and full-length practice tests — for today's most in-demand AI and IT certifications.</p>
+      <a class="btn" href="#courses">Browse courses ↓</a>
+      <a class="btn secondary" href="https://roocloud.com">Practice exams</a>
     </div>
   </section>
 
-  <main class="wrap">
+  <div class="section-head" id="courses">
     <h2>Available Courses</h2>
-    <p class="section-sub">Pick a certification to start studying for free.</p>
+    <p class="section-sub">Pick a certification and start studying — every chapter is a video plus a written guide.</p>
+  </div>
 
-    <div class="courses">
-      <a class="course-card live" href="https://roocloud-certprep.github.io/isaca-aaia-exam-prep/">
-        <span class="badge available">Available now</span>
-        <h3>ISACA AAIA — Advanced in AI Audit</h3>
-        <p>A complete 55-lesson study guide covering AI Governance &amp; Risk, AI Operations, and Auditing AI — each with an embedded video and detailed written notes.</p>
-        <div class="meta">55 lessons &middot; 3 domains &middot; Video + notes</div>
-        <span class="btn">Open course →</span>
-      </a>
+  <div class="courses">
+    <a class="course-card" href="https://roocloud-certprep.github.io/isaca-aaia-exam-prep/">
+      <span class="badge available">Available now</span>
+      <h3>ISACA AAIA</h3>
+      <p class="subtitle">Advanced in AI Audit</p>
+      <p>The complete 55-lesson study guide for auditing AI systems — from governance and risk through operations, controls and audit methodology.</p>
+      <div class="chips">
+        <span class="chip">AI Governance &amp; Risk</span>
+        <span class="chip">AI Operations</span>
+        <span class="chip">Auditing AI</span>
+      </div>
+      <div class="meta">55 lessons · 3 domains · Video + notes</div>
+      <span class="card-cta">Open course <span class="arrow">→</span></span>
+    </a>
 
-      <div class="course-card soon">
-        <span class="badge soon">Coming soon</span>
-        <h3>More certifications</h3>
-        <p>Additional ISACA and IT audit certification study guides are on the way. Subscribe on YouTube to be notified when new courses launch.</p>
-        <div class="meta">In production</div>
-        <a class="btn secondary" href="https://youtube.com/@roocloud">Follow on YouTube</a>
+    <a class="course-card" href="https://roocloud-certprep.github.io/isaca-aaism-exam-prep/">
+      <span class="badge available">Available now</span>
+      <h3>ISACA AAISM</h3>
+      <p class="subtitle">Advanced in AI Security Management</p>
+      <p>The complete 47-lesson study guide for securing AI systems — covering governance and program management, AI risk and opportunity management, and AI security technologies and controls.</p>
+      <div class="chips">
+        <span class="chip">AI Governance &amp; Program Mgmt</span>
+        <span class="chip">AI Risk &amp; Opportunity Mgmt</span>
+        <span class="chip">AI Technologies &amp; Controls</span>
+      </div>
+      <div class="meta">47 lessons · 3 domains · Video + notes</div>
+      <span class="card-cta">Open course <span class="arrow">→</span></span>
+    </a>
+  </div>
+
+  <p class="more-courses-note">More certifications in development. <a href="https://youtube.com/@roocloud">Follow on YouTube</a> for launch announcements.</p>
+
+  <section class="features">
+    <div class="wrap">
+      <h2>What's inside every course</h2>
+      <p class="section-sub">A three-part system designed for retention and exam-day readiness.</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="ic">📺</div>
+          <h3>Focused video lessons</h3>
+          <p>One YouTube video per syllabus chapter — short, structured and exam-aligned, so you can study from your phone or your commute.</p>
+        </div>
+        <div class="feature">
+          <div class="ic">📝</div>
+          <h3>In-depth written notes</h3>
+          <p>Every video pairs with a comprehensive written article you can read, search and revise from — built straight from the lesson script.</p>
+        </div>
+        <div class="feature">
+          <div class="ic">🎯</div>
+          <h3>Practice &amp; mock exams</h3>
+          <p>Reinforce each chapter with MCQs and full-length practice tests at <a href="https://roocloud.com">RooCloud.com</a> — the closing loop on exam-day confidence.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="cta-strip">
-      <h2>Test Yourself with Practice Exams</h2>
-      <p>Reinforce every lesson with chapter-wise multiple-choice questions and full-length mock exams at <a href="https://roocloud.com">RooCloud.com</a>.</p>
+  <div class="cta-strip">
+    <div>
+      <h2>Ready to test yourself?</h2>
+      <p>Chapter-wise MCQs and full-length mock exams for every course.</p>
     </div>
-  </main>
+    <a class="btn" href="https://roocloud.com">Go to RooCloud.com →</a>
+  </div>
 
   <footer class="site-footer">
-    <div class="wrap">
-      &copy; <span id="yr">2026</span> RooCloud &middot;
-      <a href="https://youtube.com/@roocloud">YouTube</a> &middot;
-      <a href="https://roocloud.com">RooCloud.com</a>
+    <div class="footer-inner">
+      <div>&copy; <span id="yr">2026</span> RooCloud</div>
+      <div class="footer-links">
+        <a href="https://youtube.com/@roocloud">YouTube</a>
+        <a href="https://roocloud.com">RooCloud.com</a>
+        <a href="https://github.com/roocloud-certprep">GitHub</a>
+      </div>
     </div>
   </footer>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
