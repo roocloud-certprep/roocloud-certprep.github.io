@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://roocloud-certprep.github.io/</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-</urlset>
+<!-- Root sitemap index for https://roocloud-certprep.github.io/ -->
+<!-- Submit THIS file to Google Search Console. It aggregates the hub-page sitemap -->
+<!-- plus one sitemap per course. Add a new sitemap entry below for each new course. -->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://roocloud-certprep.github.io/sitemap-hub.xml</loc>
+    <lastmod>2026-06-12</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://roocloud-certprep.github.io/isaca-aaia-exam-prep/sitemap.xml</loc>
+    <lastmod>2026-06-12</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://roocloud-certprep.github.io/isaca-aaism-exam-prep/sitemap.xml</loc>
+    <lastmod>2026-06-12</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://roocloud-certprep.github.io/isaca-cisa-exam-prep/sitemap.xml</loc>
+    <lastmod>2026-06-12</lastmod>
+  </sitemap>
+</sitemapindex>

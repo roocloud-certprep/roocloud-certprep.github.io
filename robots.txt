@@ -21,6 +21,11 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Domain-wide sitemaps (robots.txt is only read from the domain root)
+# Domain-wide sitemaps (robots.txt is only read from the domain root).
+# First line is the root sitemap INDEX; the rest are the per-course sitemaps it
+# aggregates. Add a Sitemap line for each new course.
 Sitemap: https://roocloud-certprep.github.io/sitemap.xml
+Sitemap: https://roocloud-certprep.github.io/sitemap-hub.xml
 Sitemap: https://roocloud-certprep.github.io/isaca-aaia-exam-prep/sitemap.xml
+Sitemap: https://roocloud-certprep.github.io/isaca-aaism-exam-prep/sitemap.xml
+Sitemap: https://roocloud-certprep.github.io/isaca-cisa-exam-prep/sitemap.xml
