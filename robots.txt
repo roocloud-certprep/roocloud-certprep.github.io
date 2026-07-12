@@ -29,3 +29,4 @@ Sitemap: https://roocloud-certprep.github.io/sitemap-hub.xml
 Sitemap: https://roocloud-certprep.github.io/isaca-aaia-exam-prep/sitemap.xml
 Sitemap: https://roocloud-certprep.github.io/isaca-aaism-exam-prep/sitemap.xml
 Sitemap: https://roocloud-certprep.github.io/isaca-cisa-exam-prep/sitemap.xml
+Sitemap: https://roocloud-certprep.github.io/isc2-cissp-exam-prep/sitemap.xml
